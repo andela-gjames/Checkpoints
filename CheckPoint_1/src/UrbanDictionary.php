@@ -22,7 +22,7 @@
           'description'       => $description,
           'example-sentence'  => $example_sentence
       );
-      //Add new data to UrbanWord::$data using custome add() function
+      //Add new data to $this->urbanWord using custome add() function
       return $this->add($word);
     }
     /**
@@ -51,9 +51,9 @@
     public function update($slang, $new)
     {
 
-      //Use array_reduce() inbuilt function to iterate over UrbanWord::$data array
+      //Use array_reduce() inbuilt function to iterate over $this->urbanWord array
       // Pass the two arguments into the callback function using use()
-      array_reduce(UrbanWord::$data, function($count, $item) use($slang, $new)
+      array_reduce($this->urbanWord, function($count, $item) use($slang, $new)
       {
         //Test if current item array has slang that is equal to argument passed
         if($item['slang'] == $slang)
