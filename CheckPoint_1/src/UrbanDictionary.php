@@ -3,8 +3,10 @@
 
   class UrbanDictionary
   {
-    public function __construct()
+    private $urbanWord;
+    public function __construct(UrbanWord $urbanWord)
     {
+      $this->urbanWord = $UrbanWord
     }
 
     /**
@@ -57,7 +59,7 @@
         if($item['slang'] == $slang)
         {
           //If match is found replace matched occurance in both arrays using array_replace
-          UrbanWord::$data[$count] = array_replace($item, $new);
+          $this->urbanWord[$count] = array_replace($item, $new);
         }
         return $count += 1;
       }, 0);
@@ -77,7 +79,7 @@
         //Get The Index of Slang data
         $index = $data["index"];
         //Delelte that slang data from the index
-        unset(UrbanWord::$data[$index]);
+        unset($this->urbanWord[$index]);
         //Return true on completion
         return true;
       }
@@ -88,13 +90,13 @@
     //Returns all the dictionary words
     public function getAll()
     {
-      return UrbanWord::$data;
+      return $this->urbanWord;
     }
 
     //Util Function: Accepts an array of new word and other data and adds it to dictionary
     private function add($word)
     {
-      return !!array_push(UrbanWord::$data, $word);
+      return !!array_push($this->urbanWord, $word);
     }
 
     //Util Function to get Index of particular slang, NOT USED
@@ -106,7 +108,7 @@
     //Util Function: Gets a Particular slang and saves the informartion in a new array containing index and data
     private function getWord($slang)
     {
-      foreach(UrbanWord::$data as $key=>$data)
+      foreach($this->urbanWord as $key=>$data)
       {
         if($slang == $data['slang'])
           return array('index' => $key, 'data' => $data);
