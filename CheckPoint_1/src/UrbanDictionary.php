@@ -1,12 +1,10 @@
 <?php
-  require("UrbanWord.php");
-
   class UrbanDictionary
   {
     private $urbanWord;
-    public function __construct(UrbanWord $urbanWord)
+    public function __construct(array $urbanWord)
     {
-      $this->urbanWord = $urbanWord
+      $this->urbanWord = $urbanWord;
     }
 
     /**
