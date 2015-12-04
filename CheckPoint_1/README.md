@@ -16,7 +16,7 @@
 <h2>Usage</h2>
 To use any of the apps follow the steps below:
 
-<h3>UrbanDictionary (Require/add UrbanDictionary.php to whatever file you are using it from)</h3>
+<h3>UrbanDictionary</h3>
 
 <h5>Create new Word</h5>
 ```php
@@ -71,7 +71,7 @@ To use any of the apps follow the steps below:
 ```php
   $urban->delete('Chillax');
 ```
-<b>Group (Require src/Group.php)</b>
+<h3>Group (Require src/Group.php)</h3>
 ```php
   <?php
     //Returns an array of words in string in descending order
