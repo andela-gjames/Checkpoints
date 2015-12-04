@@ -6,7 +6,7 @@
     private $urbanWord;
     public function __construct(UrbanWord $urbanWord)
     {
-      $this->urbanWord = $UrbanWord
+      $this->urbanWord = $urbanWord
     }
 
     /**
