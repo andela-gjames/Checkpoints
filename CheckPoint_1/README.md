@@ -85,7 +85,7 @@ To use any of the apps follow the steps below:
   The test require PHPunit to run
   To test the files, navigate to the test folder and run
 </p>
-```php
+```terminal
   phpunit GroupTest.php
   phpunit UrbanDictionaryTest.php
   phpunit UrbanWordTest.php
