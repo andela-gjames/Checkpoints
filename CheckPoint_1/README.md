@@ -20,7 +20,13 @@ To use any of the apps follow the steps below:
 ```
   <?php
     $urban = new UrbanDictionary
-    //To create new urban word pass to create function the slang, description and sentence-exaple respectively
-    $urban->create("Kpom-Kpi", "Means to chill, cool-down, mellow", "Bros, please can you Kpom-Kpi right there");
+    //To create new urban word pass to create function the
+    //slang, description and sentence-exaple respectively
+    $urban->create
+    (
+      "Kpom-Kpi",
+      "Means to chill, cool-down, mellow",
+      "Bros, please can you Kpom-Kpi right there"
+    );
   ?>
 ```
