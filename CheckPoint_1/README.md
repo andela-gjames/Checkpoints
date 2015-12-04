@@ -16,7 +16,7 @@
 <h2>Usage</h2>
 To use any of the apps follow the steps below:
 
-<b>UrbanDictionary (Require/add UrbanDictionary.php to whatever file you are using it from)</b>
+<h3>UrbanDictionary (Require/add UrbanDictionary.php to whatever file you are using it from)</h3>
 
 <h5>Create new Word</h5>
 ```php
