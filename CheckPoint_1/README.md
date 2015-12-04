@@ -16,7 +16,7 @@
 <h2>Usage</h2>
 To use any of the apps follow the steps below:
 
-<b>UrbanDictionary</b>
+<b>UrbanDictionary (Require/add UrbanDictionary.php to whatever file you are using it from)</b>
 ```php
 
   <?php
@@ -60,7 +60,7 @@ To use any of the apps follow the steps below:
 
 ```
 
-<b>Group</b>
+<b>Group (Require src/Group.php)</b>
 ```php
   <?php
     //Returns an array of words in string in descending order
