@@ -22,7 +22,7 @@ To use any of the apps follow the steps below:
 ```php
 
   <?php
-    $urban = new UrbanDictionary
+    $urban = new UrbanDictionary(UrbanWord::$data);
 
     //To create new urban word, pass  
     //slang, description and sentence-example respectively
