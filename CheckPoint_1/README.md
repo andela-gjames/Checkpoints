@@ -20,13 +20,46 @@ To use any of the apps follow the steps below:
 ```
   <?php
     $urban = new UrbanDictionary
-    //To create new urban word pass to create function the
-    //slang, description and sentence-exaple respectively
+    //To create new urban word, pass  
+    //slang, description and sentence-example respectively
+    //to create function the function
     $urban->create
     (
       "Kpom-Kpi",
       "Means to chill, cool-down, mellow",
       "Bros, please can you Kpom-Kpi right there"
     );
+
+
+    //Get a slang
+    $urban->get("Kpom-Kpi"); //Returns an array of the word, description and sentence-example
+
+    //Update Slang
+    //Updates the slang/word of Kpom-Kpi to Chillax
+    $urban->update("Kpom-Kpi", array("slang"=>"Chillax"))
+
+    //or
+    //Updates the slang and description
+    $urban->update("Kpom-Kpi", array("slang"=>"Chillax", description:"To become peaceful"))
+
+    //or
+    $urban->update
+    (
+      "Kpom-Kpi",
+       array
+       (
+         "slang"=>"Chillax",
+         "description"=>"To become peaceful",
+         "example-sentence"=>"Please Chillax"
+         )
+    )
   ?>
+```
+
+<b>Group</b>
+```
+  <?php
+    //Returns an array of words in string in descending order
+    //of Highest occurence
+    $group = Group::build("Let us go boom boom clark");
 ```
