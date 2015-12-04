@@ -78,3 +78,15 @@ To use any of the apps follow the steps below:
     //of Highest occurence
     $group = Group::build("Let us go boom boom clark");
 ```
+
+
+<h2>Testing</h2>
+<p>
+  The test require PHPunit to run
+  To test the files, navigate to the test folder and run
+  ```php
+    phpunit GroupTest.php
+    phpunit UrbanDictionaryTest.php
+    phpunit UrbanWordTest.php
+  ```
+</p>
