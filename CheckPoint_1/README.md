@@ -17,12 +17,15 @@
 To use any of the apps follow the steps below:
 
 <b>UrbanDictionary</b>
-```
+```php
+
   <?php
     $urban = new UrbanDictionary
+
     //To create new urban word, pass  
     //slang, description and sentence-example respectively
     //to create function the function
+
     $urban->create
     (
       "Kpom-Kpi",
@@ -54,6 +57,7 @@ To use any of the apps follow the steps below:
          )
     )
   ?>
+
 ```
 
 <b>Group</b>
