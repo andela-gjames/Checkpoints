@@ -61,7 +61,7 @@ To use any of the apps follow the steps below:
 ```
 
 <b>Group</b>
-```
+```php
   <?php
     //Returns an array of words in string in descending order
     //of Highest occurence
