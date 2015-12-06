@@ -1,10 +1,11 @@
 <?php
+require("UrbanWord.php");
   class UrbanDictionary
   {
-    private $urbanWord;
-    public function __construct(array $urbanWord)
+    // private $urbanWord;
+    public function __construct()
     {
-      $this->urbanWord = $urbanWord;
+      // $this->urbanWord = $urbanWord;
     }
 
     /**
@@ -20,7 +21,7 @@
           'description'       => $description,
           'example-sentence'  => $example_sentence
       );
-      //Add new data to $this->urbanWord using custome add() function
+      //Add new data to UrbanWord::$data using custome add() function
       return $this->add($word);
     }
     /**
@@ -49,15 +50,15 @@
     public function update($slang, $new)
     {
 
-      //Use array_reduce() inbuilt function to iterate over $this->urbanWord array
+      //Use array_reduce() inbuilt function to iterate over UrbanWord::$data array
       // Pass the two arguments into the callback function using use()
-      array_reduce($this->urbanWord, function($count, $item) use($slang, $new)
+      array_reduce(UrbanWord::$data, function($count, $item) use($slang, $new)
       {
         //Test if current item array has slang that is equal to argument passed
         if($item['slang'] == $slang)
         {
           //If match is found replace matched occurance in both arrays using array_replace
-          $this->urbanWord[$count] = array_replace($item, $new);
+          UrbanWord::$data[$count] = array_replace($item, $new);
         }
         return $count += 1;
       }, 0);
@@ -77,7 +78,7 @@
         //Get The Index of Slang data
         $index = $data["index"];
         //Delelte that slang data from the index
-        unset($this->urbanWord[$index]);
+        unset(UrbanWord::$data[$index]);
         //Return true on completion
         return true;
       }
@@ -88,13 +89,13 @@
     //Returns all the dictionary words
     public function getAll()
     {
-      return $this->urbanWord;
+      return UrbanWord::$data;
     }
 
     //Util Function: Accepts an array of new word and other data and adds it to dictionary
     private function add($word)
     {
-      return !!array_push($this->urbanWord, $word);
+      return !!array_push(UrbanWord::$data, $word);
     }
 
     //Util Function to get Index of particular slang, NOT USED
@@ -106,7 +107,7 @@
     //Util Function: Gets a Particular slang and saves the informartion in a new array containing index and data
     private function getWord($slang)
     {
-      foreach($this->urbanWord as $key=>$data)
+      foreach(UrbanWord::$data as $key=>$data)
       {
         if($slang == $data['slang'])
           return array('index' => $key, 'data' => $data);

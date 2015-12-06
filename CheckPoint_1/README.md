@@ -22,7 +22,7 @@ To use any of the apps follow the steps below:
 ```php
 
   <?php
-    $urban = new UrbanDictionary(UrbanWord::$data);
+    $urban = new UrbanDictionary();
 
     //To create new urban word, pass  
     //slang, description and sentence-example respectively
@@ -51,7 +51,7 @@ To use any of the apps follow the steps below:
 
     //or
     //Updates the slang and description
-    $urban->update("Kpom-Kpi", array("slang"=>"Chillax", description:"To become peaceful"))
+    $urban->update("Kpom-Kpi", array("slang"=>"Chillax", description=>"To become peaceful"))
 
     //or
     $urban->update
