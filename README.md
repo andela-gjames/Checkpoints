@@ -1,4 +1,4 @@
-#Checkpoint One
+#Checkpoint One [![StyleCI](https://styleci.io/repos/47337499/shield)](https://styleci.io/repos/47337499)
 <p>
     
     In this task, an application that serves as a dictionary for urban words and slangs is created.
