@@ -1,13 +1,18 @@
-<?php namespace CZ4\Dictionary;
+<?php
+
+namespace CZ4\Dictionary;
+
 /**
-* Class for Grouping Strings.
-**/
+ * Class for Grouping Strings.
+ **/
 class Group
 {
     /**
-     * Ranks words in a string based on occurance frequency
+     * Ranks words in a string based on occurance frequency.
+     *
      * @param  string [$string         = null] string to build
-     * @return array  of the word in descending order of frequency of occurance
+     *
+     * @return array of the word in descending order of frequency of occurance
      */
     public static function build($string = null)
     {
