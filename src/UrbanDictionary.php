@@ -1,20 +1,24 @@
-<?php namespace CZ4\Dictionary;
+<?php
+
+namespace CZ4\Dictionary;
 
 class UrbanDictionary
 {
     // private $urbanWord;
+
     public function __construct()
     {
-      // $this->urbanWord = $urbanWord;
+        // $this->urbanWord = $urbanWord;
     }
 
-    
     /**
-     * Addes new word to dictionary
-     * @param  string $slang            Slang to add
-     * @param  string $description      descrip
-     * @param  string $example_sentence example senetence in which slang is used
-     * @return boolean based on user input
+     * Addes new word to dictionary.
+     *
+     * @param string $slang            Slang to add
+     * @param string $description      descrip
+     * @param string $example_sentence example senetence in which slang is used
+     *
+     * @return bool based on user input
      */
     public function create($slang, $description, $example_sentence)
     {
@@ -29,9 +33,11 @@ class UrbanDictionary
     }
 
     /**
-     * Gets a slang word using key as index
-     * @param  string $slang the slang word to find
-     * @return array  containing  slang, description and example-sentence
+     * Gets a slang word using key as index.
+     *
+     * @param string $slang the slang word to find
+     *
+     * @return array containing  slang, description and example-sentence
      */
     public function get($slang)
     {
@@ -46,12 +52,13 @@ class UrbanDictionary
         }
     }
 
-    
     /**
-     * Updates slang word
-     * @param  string $slang slang to update
-     * @param  array  $new   contains array of slang parameters to update
-     * @return int    of slang updated
+     * Updates slang word.
+     *
+     * @param string $slang slang to update
+     * @param array  $new   contains array of slang parameters to update
+     *
+     * @return int of slang updated
      */
     public function update($slang, $new)
     {
@@ -60,19 +67,21 @@ class UrbanDictionary
         // Pass the two arguments into the callback function using use()
         array_reduce(UrbanWord::$data, function ($count, $item) use ($slang, $new) {
             //Test if current item array has slang that is equal to argument passed
-            if ($item['slang'] == $slang) {
+            if ($item['slang'] === $slang) {
                 //If match is found replace matched occurance in both arrays using array_replace
                 UrbanWord::$data[$count] = array_replace($item, $new);
             }
+
             return $count += 1;
         }, 0);
     }
 
-    
     /**
-     * Deletes a particular slang from the UrbanWord object
-     * @param  string  $slang the slang word to delete
-     * @return boolean if delete successful returns else returns false
+     * Deletes a particular slang from the UrbanWord object.
+     *
+     * @param string $slang the slang word to delete
+     *
+     * @return bool if delete successful returns else returns false
      */
     public function delete($slang)
     {
@@ -91,9 +100,9 @@ class UrbanDictionary
         return false;
     }
 
-    
     /**
-     * Function is used when all words from dictionary is needed
+     * Function is used when all words from dictionary is needed.
+     *
      * @return array of each word in UrbanWord
      */
     public function getAll()
@@ -101,28 +110,30 @@ class UrbanDictionary
         return UrbanWord::$data;
     }
 
-    
     /**
-     * Util method: used to add new word to UrbanWord array object
-     * @param  array   $word associative array of each slang, description and example-sentence
-     * @return boolean if added successfully or false if not added successfully
+     * Util method: used to add new word to UrbanWord array object.
+     *
+     * @param array $word associative array of each slang, description and example-sentence
+     *
+     * @return bool if added successfully or false if not added successfully
      */
     private function add($word)
     {
         return (bool) array_push(UrbanWord::$data, $word);
     }
 
-    
     /**
      * Util Function: Gets a Particular slang and saves the informartion in a new array containing index and data
-     * array('index' => $key, 'data' => $value)
-     * @param  string $slang slang word to get
-     * @return array  of slang index and slang word data
+     * array('index' => $key, 'data' => $value).
+     *
+     * @param string $slang slang word to get
+     *
+     * @return array of slang index and slang word data
      */
     private function getWord($slang)
     {
         foreach (UrbanWord::$data as $key => $data) {
-            if ($slang == $data['slang']) {
+            if ($slang === $data['slang']) {
                 return array('index' => $key, 'data' => $data);
             }
         }
