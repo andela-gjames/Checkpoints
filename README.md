@@ -71,8 +71,6 @@ To use any of the apps follow the steps below:
          "example-sentence"=>"Please Chillax"
          )
     )
-  ?>
-
 ```
 <h5>Delete A Word</h5>
 ```php
