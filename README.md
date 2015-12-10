@@ -10,7 +10,7 @@
     Also, a dictionary class is created that can add, retrieve, update and delete meanings of urban words from 
     `UrbanWord` thrown in as arguments to the class functions. 
     <br/>
-    PHPUnit was also used to effectively test classes and functions to ensure they do are effective.
+    PHPUnit was also used to effectively test classes and functions to ensure they are effective.
 </p>
 
 <h2>Features</h2>
