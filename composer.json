@@ -1,0 +1,11 @@
+{
+    "autoload":{
+        "psr-4":{ 
+            "CZ4\\Dictionary\\":"src",
+            "CZ4\\Tests\\":"tests"
+        }
+    },
+    "require-dev":{
+        "phpunit/phpunit": "5.*"
+    }
+}
