@@ -87,10 +87,8 @@ To use any of the apps follow the steps below:
 <h2>Testing</h2>
 <p>
   The test require PHPunit to run
-  To test the files, navigate to the `/tests` directory and run
+  To test the files, navigate to the root `/` directory and run
 </p>
 ```console
-  phpunit GroupTest.php
-  phpunit UrbanDictionaryTest.php
-  phpunit UrbanWordTest.php
+    phpunit
 ```
