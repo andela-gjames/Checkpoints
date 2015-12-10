@@ -86,7 +86,7 @@ To use any of the apps follow the steps below:
 
 <h2>Testing</h2>
 <p>
-  The test require PHPunit to run
+  The test require PHPunit to run<br/>
   To test the files, navigate to the root `/` directory and run
 </p>
 ```console
