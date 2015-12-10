@@ -1,4 +1,6 @@
-#Checkpoint One [![StyleCI](https://styleci.io/repos/47337499/shield)](https://styleci.io/repos/47337499)
+#Checkpoint One 
+[![StyleCI](https://styleci.io/repos/47337499/shield)](https://styleci.io/repos/47337499)
+[![Build Status](https://travis-ci.org/andela-gjames/Urban-Dictionary.svg?branch=develop)](https://travis-ci.org/andela-gjames/Urban-Dictionary)
 <p>
     
     In this task, an application that serves as a dictionary for urban words and slangs is created.
@@ -25,7 +27,7 @@ To use any of the apps follow the steps below:
 
 <h3>UrbanDictionary</h3>
 
-<h5>Create new Word</h5>
+<h5>Create New Word</h5>
 ```php
     $urban = new UrbanDictionary();
 
@@ -42,13 +44,13 @@ To use any of the apps follow the steps below:
 
 ```
 
-<h5>Get/Retrieve a word</h5>
+<h5>Get/Retrieve A Word</h5>
 ```php
     //Get a slang
     $urban->get("Kpom-Kpi"); //Returns an array of the word, description and sentence-example
 ```
 
-<h5>Update a word</h5>
+<h5>Update A Word</h5>
 ```php
     //Update Slang
     //Updates the slang/word of Kpom-Kpi to Chillax
@@ -72,13 +74,12 @@ To use any of the apps follow the steps below:
   ?>
 
 ```
-<h5>Delete a word</h5>
+<h5>Delete A Word</h5>
 ```php
   $urban->delete('Chillax');
 ```
-<h3>Group (Require src/Group.php)</h3>
+<h5>Group</h5>
 ```php
-  <?php
     //Returns an array of words in string in descending order
     //of Highest occurence
     $group = Group::build("Let us go boom boom clark");
